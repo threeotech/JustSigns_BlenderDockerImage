@@ -1,7 +1,9 @@
-./batch_export_fbx.sh ../howard/blender/ ../howard/fbx/
+Upload to Azure Container Registries
+1. docker build -t blender .
+2. docker login virtualsignlanguage.azurecr.io
+3. docker tag blender virtualsignlanguage.azurecr.io/blender
+4. docker push virtualsignlanguage.azurecr.io/blender
 
-./batch_get_fbx.sh ../howard/fbx/ ../howard/gltf/
-
-python3 get_gltf_batch.py ../imagine/gltf/ ../imagine/csv/
-
-python3 uploadkeypoint_universal.py ../imagine/csv imagine
+Run Image 
+1. docker run -it blender /bin/bash
+2. ./main.sh filename,filename,...
