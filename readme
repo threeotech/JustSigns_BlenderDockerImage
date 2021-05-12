@@ -1,0 +1,7 @@
+./batch_export_fbx.sh ../howard/blender/ ../howard/fbx/
+
+./batch_get_fbx.sh ../howard/fbx/ ../howard/gltf/
+
+python3 get_gltf_batch.py ../imagine/gltf/ ../imagine/csv/
+
+python3 uploadkeypoint_universal.py ../imagine/csv imagine
